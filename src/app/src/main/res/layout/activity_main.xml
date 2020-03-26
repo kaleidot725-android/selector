@@ -1,64 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/ok_button"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_selector"
         android:text="OK"
-        android:textColor="@color/color_selector"
-        android:background="@drawable/background_selector"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ng_button"
-        app:layout_constraintBottom_toTopOf="@id/ok_image_button"/>
+        android:textColor="@color/color_selector" />
 
-    <Button
-        android:id="@+id/ng_button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="NG"
-        android:textColor="@color/color_selector"
-        android:background="@drawable/background_selector"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ok_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/ng_image_button"/>
-
-    <ImageButton
-        android:id="@+id/ok_image_button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/drawable_selector"
-        android:background="@drawable/background_selector"
-        app:layout_constraintTop_toBottomOf="@id/ok_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ng_image_button"
-        app:layout_constraintBottom_toTopOf="@id/color_text_enable_button"/>
 
     <ImageButton
         android:id="@+id/ng_image_button"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/drawable_selector"
+        android:layout_margin="16dp"
         android:background="@drawable/background_selector"
-        app:layout_constraintStart_toEndOf="@id/ok_image_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ng_button"
-        app:layout_constraintBottom_toTopOf="@id/color_text_enable_button"/>
+        android:src="@drawable/drawable_selector" />
 
     <Button
         android:id="@+id/color_text_enable_button"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:text="Enable/Disable"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ok_button"
-        app:layout_constraintBottom_toBottomOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_selector"
+        android:text="Enable/Disable" />
+</LinearLayout>
